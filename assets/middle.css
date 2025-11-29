@@ -1,0 +1,324 @@
+/* @import url("fonts.css"); */
+ul {
+  list-style: none;
+}
+
+button {
+  padding: 0px;
+  margin: 0px;
+  background-color: transparent;
+  border: none;
+}
+
+body {
+  margin: 0px;
+  background-color: rgb(238, 239, 224);
+}
+
+.hide {
+  display: none !important;
+}
+
+.navbar::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-box::-webkit-scrollbar {
+  display: none;
+}
+
+#header-area {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: fit-content;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  background-color: rgb(55, 53, 62);
+}
+#header-area > .header {
+  padding: 20px 20px 0px 20px;
+  box-sizing: border-box;
+}
+#header-area > .header > .logo {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  font-family: quicksand;
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+}
+#header-area > .header > .logo img {
+  height: inherit;
+  aspect-ratio: initial;
+}
+#header-area > .header .btn-bar {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  flex: 1;
+  gap: 10px;
+  width: fit-content;
+}
+#header-area > .header search {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+#header-area > .header search > #search-bar {
+  width: 100%;
+  margin: 0px;
+}
+#header-area > .header search > #home {
+  margin: 0px -2px 0px 0px;
+}
+#header-area > .navbar {
+  max-width: fit-content;
+  padding: 0px;
+  margin: 0px 0px 15px 0px;
+}
+#header-area > .navbar > .logo {
+  display: none;
+}
+#header-area > .navbar > .tab-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding: 0px 10px;
+  margin: 0px;
+  font-family: quicksand;
+  font-size: 16px;
+  color: rgb(220, 215, 201);
+}
+#header-area > .navbar > .tab-menu::-webkit-scrollbar {
+  display: none;
+}
+#header-area > .navbar > .tab-menu > .main-nav-tab-btn {
+  display: inline-block;
+  user-select: none;
+  padding: 12px 20px;
+  margin: 0px;
+  background-color: rgb(68, 68, 78);
+  border-radius: 10px;
+}
+#header-area > .navbar > .tab-menu > .active {
+  background-color: rgb(200, 170, 170);
+  color: rgb(15, 16, 23);
+}
+
+#toolbar {
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 85%;
+  max-width: fit-content;
+  height: 50px;
+  padding: 0px;
+  margin: 0px 0px 30px 0px;
+  background-color: rgb(63, 61, 49);
+  border-radius: 10px;
+}
+#toolbar > .navbar {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: fit-content;
+  height: fit-content;
+  padding: 0px;
+  margin: 0px;
+  border-left: 1.5px rgb(115.025, 112.7321428571, 98.975) solid;
+  border-right: 1.5px rgb(115.025, 112.7321428571, 98.975) solid;
+}
+#toolbar > .navbar::-webkit-scrollbar {
+  display: none;
+}
+#toolbar > .navbar > .tab-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  white-space: nowrap;
+  padding: 0px 0px 0px 10px;
+  margin: 0px;
+  font-family: quicksand;
+  font-size: 18px;
+  color: rgb(235, 229, 194);
+}
+#toolbar > .navbar > .tab-menu::after {
+  content: "";
+  border-left: 10px solid rgb(63, 61, 49);
+}
+#toolbar > .navbar > .tab-menu > .toolbar-nav-tab-btn {
+  display: inline-block;
+  user-select: none;
+  padding: 8px 15px;
+  margin: 0px;
+}
+#toolbar > .navbar > .tab-menu > .active {
+  background-color: rgb(185, 178, 138);
+  color: black;
+  border-radius: 10px;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 215px);
+  justify-content: space-evenly;
+  width: calc(100% - 15px);
+  margin: 0px auto;
+}
+#container > .tile {
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 0;
+  content-visibility: auto;
+  width: 200px;
+  padding: 5px;
+  margin: 0px;
+  box-sizing: border-box;
+  background-color: rgb(213, 183, 145);
+  border-radius: 20px;
+}
+#container > .tile > .top {
+  display: grid;
+  grid-template-columns: 40px 150px;
+  grid-auto-rows: 150px;
+  width: 100%;
+}
+#container > .tile > .top > .item-img {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  object-fit: cover;
+  border-radius: 0px;
+  border-radius: 0px 15px 5px 0px;
+}
+#container > .tile > .top > .value[data-for=t2_meal_course] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 16px 8px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: CaviarDreams;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 2px;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  text-align: center;
+  transform: rotate(180deg);
+  text-transform: uppercase;
+  background-color: rgba(79, 45, 45, 0.85);
+  border-radius: 0px 5px 15px 0px;
+}
+#container > .tile > .bottom {
+  flex: 1;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 5px;
+}
+#container > .tile > .bottom > .info-box {
+  width: 100%;
+  height: 100%;
+  min-height: fit-content;
+  padding: 12px;
+  margin: 0px;
+  box-sizing: border-box;
+  background-color: rgb(238, 239, 224);
+  border-radius: 5px;
+}
+#container > .tile > .bottom > .info-box > .value[data-for=name] {
+  padding: 0px;
+  margin: 0px 0px 12px 0px;
+  font-family: Oswald;
+  font-size: 17px;
+  line-height: 19px;
+  letter-spacing: 2px;
+  color: black;
+}
+#container > .tile > .bottom > .info-box > .value[data-for=serving-size] {
+  padding: 0px;
+  margin: 0px 0px 8px 0px;
+  font-family: quicksand;
+  font-size: 15px;
+  color: rgb(34, 34, 34);
+}
+#container > .tile > .bottom > .info-box > .info {
+  font-family: quicksand;
+  font-size: 14px;
+  line-height: 16px;
+}
+#container > .tile > .bottom > .info-box > .info p {
+  padding: 0px;
+  margin: 0px 0px 3px 0px;
+}
+#container > .tile > .bottom > .info-box > .info .tag {
+  font-weight: bold;
+  color: rgb(34, 34, 34);
+}
+#container > .tile > .bottom > .info-box > .info .value {
+  color: rgb(52, 52, 52);
+}
+#container > .tile > .bottom > .info-box > .value[data-for=description] {
+  padding: 0px;
+  margin: 5px 0px 8px 0px;
+  font-family: quicksand;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgb(52, 52, 52);
+}
+#container > .tile > .bottom > .info-box .value[data-for=price] {
+  width: fit-content;
+  padding: 0px;
+  margin: 8px 0px 0px 0px;
+  font-family: quicksand;
+  font-weight: 500;
+}
+#container > .tile > .bottom > .value[data-for=category], #container > .tile > .bottom > .value[data-for=price] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 25px;
+  min-height: fit-content;
+  padding: 0px 16px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: vonique_64;
+  font-size: 13px;
+  color: white;
+  text-align: center;
+  letter-spacing: 3px;
+  border-radius: 5px 5px 15px 15px;
+}
+
+.tile[data-category="1"] .value[data-for=category] {
+  background-color: rgba(0, 128, 0, 0.75);
+}
+
+.tile[data-category="2"] .value[data-for=category] {
+  background-color: rgba(132, 13, 13, 0.75);
+}
+
+/*# sourceMappingURL=middle.css.map */
